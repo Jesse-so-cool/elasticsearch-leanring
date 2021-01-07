@@ -61,8 +61,10 @@
 </script>
 <div  class="wrap">
 <input type="text" id="key" value="${key}"/>
-<button id="btn" onclick="search()">搜索</button>
+<button id="btn" onclick="search()">search</button></br>
+
     <div class="inner">
+        total : ${size}
 </br>
     <table border="1">
         <tr>
