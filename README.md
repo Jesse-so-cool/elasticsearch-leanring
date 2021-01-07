@@ -1,4 +1,4 @@
-a elasticsearch demo for searching for movie
+a elasticsearch demo for searching for movie  
 datasource : tmdb from kaggle
 
 usage:
