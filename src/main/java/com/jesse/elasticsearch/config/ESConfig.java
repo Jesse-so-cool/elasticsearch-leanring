@@ -20,24 +20,6 @@ import java.net.InetAddress;
  */
 @Configuration
 public class ESConfig {
-    @Bean
-    public TransportClient getClient(){
-        TransportClient transportClient = null;
-        try {
-            Settings settings = Settings.builder()
-                    .put("cluster.name","hsj").build();
-            transportClient = new PreBuiltTransportClient(settings);
-            TransportAddress firstAddress = new TransportAddress(InetAddress.getByName("192.168.240.92"),Integer.parseInt("9300"));
-            TransportAddress secondAddress = new TransportAddress(InetAddress.getByName("192.168.240.92"),Integer.parseInt("9301"));
-            transportClient.addTransportAddress(firstAddress);
-            transportClient.addTransportAddress(secondAddress);
-
-        }catch (Exception e){
-            e.printStackTrace();
-
-        }
-        return transportClient;
-    }
 
     @Bean
     public RestHighLevelClient restHighLevelClient() {
